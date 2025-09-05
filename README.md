@@ -118,4 +118,4 @@ Applies GPA-BF on multiple images using all implementations.
 ---
 
 ✅ This project demonstrates performance and accuracy comparisons between **industry-standard (OpenCV, NPPI)** and **custom CUDA implementations** of bilateral filtering at scale.  
-# CUDA-at-Scale-Independent-Project
+# CUDA at Scale Independent Project
