@@ -117,5 +117,15 @@ Applies GPA-BF on multiple images using all implementations.
 
 ---
 
-✅ This project demonstrates performance and accuracy comparisons between **industry-standard (OpenCV, NPPI)** and **custom CUDA implementations** of bilateral filtering at scale.  
+## Performance Comparison
+
+| Method             | Avg Computation Time (ms) | Typical Error Range (approximate)               | Relative Speed Compared to OpenCV CPU |
+|--------------------|---------------------------|------------------------------------------------|-------------------------------------|
+| OpenCV CPU         | ~37.5                     | None (Reference)                                | 1x (baseline)                       |
+| OpenCV OpenCL      | ~37.8                     | [0, 0, 0, 0]                                   | ~1x                                |
+| OpenCV CUDA        | ~18.5                     | Very low (order of e-5 to 0)                    | ~2x faster                        |
+| NPPI               | ~191                      | High variability, errors up to tens or thousands| ~5x slower                       |
+| Custom CUDA Kernel  | ~15.4                     | Moderate errors (approx 0.4 to 2 range)         | ~2.5x faster                      |
+
+
 # CUDA at Scale Independent Project
